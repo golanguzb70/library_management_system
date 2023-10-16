@@ -8,7 +8,7 @@
 #include <algorithm>
 
 using namespace std;
-// Structure to represent a book
+
 struct Book {
     string title;
     string author;
@@ -16,10 +16,8 @@ struct Book {
     int year;
 };
 
-// Global vector to store the books
 extern vector<Book> books;
 
-// Function prototypes
 void addBook();
 void removeBook();
 void searchBook();

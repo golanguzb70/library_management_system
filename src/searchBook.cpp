@@ -8,11 +8,15 @@ void searchBook() {
     cout << "\nEnter title/author/ISBN to search: ";
     cin.ignore();
     getline(cin, searchTerm);
-
-    // Search
+    bool found = false;
     for (const auto &book : books) {
         if (book.title == searchTerm || book.author == searchTerm || book.isbn == searchTerm) {
+            found = true;
             cout << "\nFound: " << book.title << ", " << book.author << ", " << book.isbn << ", " << book.year << "\n";
         }
+    }
+
+    if (!found) {
+        cout << "\nData is not found, try again\n";
     }
 }
